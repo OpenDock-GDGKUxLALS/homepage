@@ -1,8 +1,9 @@
 import { GITHUB_URL } from "./content";
 
-// 검색엔진과 링크 미리보기에 쓰는 사이트 정보. canonical 주소는 www 없는 도메인으로 통일한다.
+// 검색엔진과 링크 미리보기에 쓰는 사이트 정보.
+// Vercel이 opendock.co.kr을 www로 308 리다이렉트하므로 canonical 주소도 www로 맞춘다.
 export const site = {
-  url: "https://opendock.co.kr",
+  url: "https://www.opendock.co.kr",
   name: "OpenDock",
   title: "OpenDock — AI 단백질–리간드 도킹 플랫폼",
   tagline: "AI-powered protein–ligand docking platform",
