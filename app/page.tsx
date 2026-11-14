@@ -2,12 +2,49 @@ import { CoverBackground } from "./cover-background";
 import { DockingHeader } from "./docking-header";
 import { Lockup, coverEm, lockupLayout } from "./lockup";
 import { Sections } from "./sections";
+import { site } from "./site";
+
+// 검색엔진이 사이트와 운영 주체를 알아보도록 넣는 구조화 데이터(schema.org).
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      url: site.url,
+      logo: `${site.url}/cover/logo.svg`,
+      sameAs: site.sameAs,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      name: site.name,
+      url: site.url,
+      inLanguage: "ko-KR",
+      publisher: { "@id": `${site.url}/#organization` },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: site.name,
+      url: site.url,
+      description: site.description,
+      applicationCategory: "ScienceApplication",
+      operatingSystem: "Web",
+      publisher: { "@id": `${site.url}/#organization` },
+    },
+  ],
+};
 
 // Figma "cover" (node 7:78) — 1920×1080 아트보드를 화면 크기에 맞춰 비율대로 줄이고 늘린다.
 // 아트보드의 10px이 1em이 되도록 기준 글자 크기를 잡고, 안쪽 치수는 모두 em으로 쓴다.
 export default function Home() {
   return (
     <main id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
       <DockingHeader />
       <section
         id="cover"

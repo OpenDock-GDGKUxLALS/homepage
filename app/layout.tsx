@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reddit_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { site } from "./site";
 
 const pretendard = localFont({
   src: "../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
@@ -16,9 +17,27 @@ const redditSans = Reddit_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OpenDock — AI-powered protein–ligand docking platform",
-  description:
-    "GDGoC KU × LALS 신약개발 협업 프로젝트. 커맨드라인 없이 웹 브라우저에서 AutoDock Vina와 AI 구조 예측 모델을 실행하고 결과를 비교합니다.",
+  metadataBase: new URL(site.url),
+  title: { default: site.title, template: `%s | ${site.name}` },
+  description: site.description,
+  applicationName: site.name,
+  keywords: site.keywords,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: site.title,
+    description: site.description,
+    locale: "ko_KR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+  formatDetection: { telephone: false },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

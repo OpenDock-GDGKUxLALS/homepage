@@ -15,7 +15,7 @@ export function Lockup() {
       />
       <span className="font-display flex items-start text-[14.4em] leading-none font-medium tracking-[-0.01em] whitespace-nowrap text-white">
         OPENDOCK
-        <span className="font-reddit mt-[1.25em] ml-[0.25em] text-[0.25em] font-normal tracking-normal text-white/62">
+        <span aria-hidden className="font-reddit mt-[1.25em] ml-[0.25em] text-[0.25em] font-normal tracking-normal text-white/62">
           TM
         </span>
       </span>
