@@ -10,4 +10,29 @@
 body {
   background: #000;
   color: #fff;
+  /* 한국어 문장이 단어 중간에서 끊기지 않게 한다 */
+  word-break: keep-all;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* DockingHeader가 스크롤 진행도를 --dock(0~1)으로 내보낸다. */
+/* 로고가 상단바에 거의 닿았을 때 배경과 메뉴가 나타난다. */
+.dock-reveal {
+  opacity: calc((var(--dock, 0) - 0.7) * 4);
+}
+
+.dock-nav {
+  pointer-events: none;
+}
+
+[data-docked] .dock-nav {
+  pointer-events: auto;
+}
+
+/* 커버의 부제는 로고가 떠나는 동안 먼저 사라진다. */
+.cover-fade {
+  opacity: calc(1 - var(--dock, 0) * 2.5);
 }

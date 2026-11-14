@@ -25,6 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="ko"
+      data-scroll-behavior="smooth"
       className={`${pretendard.variable} ${redditSans.variable} antialiased`}
     >
       <body className="font-sans">{children}</body>
