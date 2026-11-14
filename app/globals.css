@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-pretendard), system-ui, sans-serif;
+  --font-reddit: var(--font-reddit-sans), system-ui, sans-serif;
+  /* 디자인 원본은 Helvetica Now Display Medium(상용 폰트). 웹폰트가 없어 시스템 Helvetica 계열로 대신한다. */
+  --font-display: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
