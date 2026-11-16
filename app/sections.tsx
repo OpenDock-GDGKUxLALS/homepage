@@ -71,7 +71,7 @@ export function Sections() {
           title="물리 기반 도킹과 AI 구조 예측을 한곳에서"
           lead="서로 다른 원리로 계산한 결과를 같은 입력으로 돌려 보고, 어디가 일치하고 어디가 갈리는지 확인합니다."
         />
-        <ul className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {engines.map((engine) => (
             <li
               key={engine.name}
