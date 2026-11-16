@@ -50,8 +50,9 @@ export const comparisons = [
 
 export const engines = [
   { name: "AutoDock Vina", kind: "물리 기반 도킹", ready: true },
-  { name: "AlphaFold3", kind: "AI 구조 예측", ready: true },
+  { name: "Boltz-2", kind: "AI 구조 예측", ready: true },
+  { name: "OpenMM", kind: "분자동역학 시뮬레이션", ready: true },
+  { name: "AlphaFold3", kind: "AI 구조 예측", ready: false },
   { name: "Protenix", kind: "AI 구조 예측", ready: false },
-  { name: "Boltz-2", kind: "AI 구조 예측", ready: false },
   { name: "Chai-1", kind: "AI 구조 예측", ready: false },
 ];

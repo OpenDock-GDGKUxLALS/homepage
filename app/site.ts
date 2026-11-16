@@ -5,16 +5,18 @@ import { GITHUB_URL } from "./content";
 export const site = {
   url: "https://www.opendock.co.kr",
   name: "OpenDock",
-  title: "OpenDock — AI 단백질–리간드 도킹 플랫폼",
+  title: "AI 단백질–리간드 도킹 플랫폼 | OpenDock",
   tagline: "AI-powered protein–ligand docking platform",
   description:
-    "설치도 커맨드라인도 없이 웹 브라우저에서 AutoDock Vina 도킹과 AlphaFold3 같은 AI 구조 예측을 실행하고, 결과를 3D로 나란히 비교하는 신약개발 플랫폼입니다. GDGoC KU × LALS 협업 프로젝트.",
+    "설치도 커맨드라인도 없이 웹 브라우저에서 AutoDock Vina 도킹과 Boltz-2 같은 AI 구조 예측, OpenMM 분자동역학 시뮬레이션을 실행하고, 결과를 3D로 나란히 비교하는 신약개발 플랫폼입니다. GDGoC KU × LALS 협업 프로젝트.",
   keywords: [
     "OpenDock",
     "분자 도킹",
     "단백질 리간드 도킹",
     "protein-ligand docking",
     "AutoDock Vina",
+    "Boltz-2",
+    "OpenMM",
     "AlphaFold3",
     "AI 구조 예측",
     "신약개발",
